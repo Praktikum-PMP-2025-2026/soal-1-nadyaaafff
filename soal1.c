@@ -28,7 +28,3 @@ int main(){
         printf("TOLAK");
     }
     return 0;}
-
-
-
-
