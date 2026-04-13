@@ -15,16 +15,13 @@ int main(){
     }else if(jam < 6 || jam > 20){
             printf("TOLAK");
         }
-    else if (izin == 2 && suhu < 390 && suhu >= 380 && radiasi != 0 && radiasi <= 2){
-        printf("PEMERIKSAAN");}
-        else if(radiasi <= 2 && jam >= 8 && jam <= 18){
-            printf("MASUK");
-        }
-    
-    else if (izin == 3 && radiasi != 0 &&suhu < 380 && suhu >= 370){
+    else if (izin == 2 && radiasi <= 2 && jam >= 8 && jam <= 18){
         printf("MASUK");}
-        else if(radiasi == 0 && suhu < 380){
-            printf("TOLAK");
+    else if (izin == 2 ){
+        printf("PEMERIKSAAN");
+    }
+    else if (izin == 3 && radiasi == 0 && suhu < 380){
+        printf("MASUK");
         }
     
     else{
