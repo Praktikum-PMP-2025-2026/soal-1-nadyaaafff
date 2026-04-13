@@ -1,7 +1,6 @@
 #include <stdio.h>
 int main(){
-    float suhu;
-    int izin, radiasi, jam; 
+    int izin, radiasi, jam, suhu; 
     scanf("%d %d %d %d", &izin, &suhu, &radiasi, &jam);
     if (radiasi >= 6){
         printf("TOLAK");
@@ -9,17 +8,17 @@ int main(){
         printf("KARANTINA");
     } else if (izin == 1){
         printf("MASUK");
-        if(jam >= 6 && jam <= 20){
+        if(jam < 6 || jam > 20){
             printf("TOLAK");
         }
     } else if (izin == 2){
         printf("PEMERIKSAAN");
-        if(radiasi > 2 || jam <= 8 || jam >= 18){
+        if(radiasi <= 2 && jam > 8 && jam < 18){
             printf("TOLAK");
         }
     } else if (izin == 3){
         printf("MASUK");
-        if(radiasi >= 380){
+        if(radiasi == 0 && suhu < 380){
             printf("TOLAK");
         }
     }
